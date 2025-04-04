@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding-top: 60px;
+}
+
+/* Menú de navegación */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    padding: 2px 20px;
+    background-color: #333;
+}
+
+.logo {
+    height: 50px; /* Ajusta el tamaño según tu imagen */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+
+.categoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Acomoda los elementos en columna */
+    padding: 20px;
+}
+
+/* Contenedor del catálogo */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Estilos para los productos */
+.producto {
+    display: flex;
+    flex-direction: column; /* Acomoda imagen y texto en columna */
+    align-items: center; /* Centra los elementos dentro */
+    justify-content: center;
+    text-align: center;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Sección de contactos */
+.contactos {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.contactos a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: opacity 0.3s;
+}
+
+.contactos a:hover {
+    opacity: 0.8;
+}
+
+.contactos a.instagram {
+    background-color: #E4405F;
+}
+
+.contactos a.whatsapp {
+    background-color: #096129;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .menu-container {
+        flex-direction: column; /* Cambia la disposición a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .logo {
+        margin-bottom: 5px; /* Espacio entre el logo y el menú */
+        height: 35px;
+    }   
+
+    .menu {
+            flex-direction: row; /* Menú en línea */
+            flex-wrap: wrap; /* Permite que los ítems se ajusten si hay poco espacio */
+            justify-content: center; /* Centra los ítems en pantalla */
+            text-align: center;
+            gap: 10px;
+    }
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .catalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto {
+        width: 90%;
+    }
+}
