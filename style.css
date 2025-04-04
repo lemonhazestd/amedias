@@ -12,6 +12,10 @@ body {
     text-align: center;
     background-color: #f8f8f8;
     padding-top: 60px;
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 /* Menú de navegación */
@@ -116,11 +120,12 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 15px;
-    transition: opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 .contactos a:hover {
     opacity: 0.8;
+    transform: scale(1.1);
 }
 
 .contactos a.instagram {
@@ -130,6 +135,7 @@ header {
 .contactos a.whatsapp {
     background-color: #096129;
 }
+
 
 /* Responsividad */
 @media (max-width: 600px) {
