@@ -87,16 +87,18 @@ header {
     align-items: center; /* Centra los elementos dentro */
     justify-content: center;
     text-align: center;
+    font-family: "Nunito Sans", sans-serif;
     width: 200px;
-    border: 1px solid #ddd;
+    border: 1px solid gray;
     padding: 15px;
-    background-color: white;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border-radius: 8px;
+    transition: transform 0.3s, opacity 0.3s;
 
 }
 
 .producto:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -126,46 +128,3 @@ header {
 .contactos a:hover {
     opacity: 0.8;
     transform: scale(1.1);
-}
-
-.contactos a.instagram {
-    background-color: #E4405F;
-}
-
-.contactos a.whatsapp {
-    background-color: #096129;
-}
-
-
-/* Responsividad */
-@media (max-width: 600px) {
-    .menu-container {
-        flex-direction: column; /* Cambia la disposición a columna */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .logo {
-        margin-bottom: 5px; /* Espacio entre el logo y el menú */
-        height: 35px;
-    }   
-
-    .menu {
-            flex-direction: row; /* Menú en línea */
-            flex-wrap: wrap; /* Permite que los ítems se ajusten si hay poco espacio */
-            justify-content: center; /* Centra los ítems en pantalla */
-            text-align: center;
-            gap: 10px;
-    }
-    .menu-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .catalogo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .producto {
-        width: 90%;
-    }
-}
