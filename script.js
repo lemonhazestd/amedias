@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault(); // Evita el desplazamiento automático
             const categoriaId = this.getAttribute("href").substring(1);
             mostrarCategoria(categoriaId);
+            history.pushState(null, null, `#${categoriaId}`); // Actualiza la URL
         });
     });
 
@@ -37,5 +38,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar la primera categoría por defecto
     mostrarCategoria("zoquetes");
 });
-
-history.pushState(null, null, `#${categoriaId}`);
